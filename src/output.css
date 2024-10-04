@@ -1087,6 +1087,10 @@ select {
   top: 30%;
 }
 
+.bottom-\[3vw\] {
+  bottom: 3vw;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -3902,6 +3906,10 @@ html.lenis body {
 
   .md\:top-\[8vh\] {
     top: 8vh;
+  }
+
+  .md\:bottom-\[1vw\] {
+    bottom: 1vw;
   }
 
   .md\:mt-0 {
