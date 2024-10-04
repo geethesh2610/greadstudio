@@ -18,31 +18,42 @@
 </head>
 
 <body class="antialiased">
-	<header class="bg-[#f2f7f5]">
-		<div class="flex items-center justify-between px-[6vw] h-[12vh]">
+	<header class="bg-[#f2f7f5] relative">
+		<div class="flex items-center justify-between px-[5vw] md:px-[6vw] h-[8vh] md:h-[6vh] lg:h-[12vh]">
 			<a href="#">
-				<img src="./public/images/logo.png" class="w-[15vw]" alt="Logo">
+				<img src="./public/images/logo.png" class="w-[30vw] md:w-[15vw]" alt="Logo">
 			</a>
-			<button class="group">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[2.5vw] duration-300 group-hover:text-[#b6d561]">
+			<button id="nav-btn" class="group">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[6vw] md:w-[2.5vw] duration-300 group-hover:text-[#b6d561]">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 				</svg>
 			</button>
+		</div>
+
+		<div id="floating-nav" class="bg-white shadow-md absolute right-[6vw] top-[10vh] md:top-[8vh] lg:top-[14vh] rounded-[2vw] md:rounded-[1vw] w-[40vw] md:w-[17.5vw] z-[9] overflow-hidden translate-y-[2vw] opacity-0 duration-300">
+			<ul class="font-mont text-[3vw] md:text-[1.15vw] font-medium py-[1vw] md:py-0">
+				<li><a href="team.html" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Our Team</a></li>
+				<li><a href="#branding-studio" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Branding Studio</a></li>
+				<li><a href="#marketing-studio" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Marketing Studio</a></li>
+				<li><a href="#animation-studio" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Animation Studio</a></li>
+				<li><a href="#vfx-studio" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Vfx Studio</a></li>
+				<li><a href="contact.html" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Contact</a></li>
+			</ul>
 		</div>
 	</header>
 
 	<main>
 		<!-- Landing Section -->
-		<section class="relative lg:h-[88vh] flex items-center justify-center">
-			<div class="pb-[5vw]">
-				<h1 class="font-mont font-semibold text-[2.75vw]">Looking for a <span class="text-[#b6d561]">Digital marketer?</span></h1>
+		<section class="relative h-[92vh] md:h-[40vh] lg:h-[88vh] flex items-center justify-center">
+			<div class="pb-[5vw] px-[6vw]">
+				<h1 class="font-mont font-semibold text-[6.5vw] md:text-[2.75vw] text-center">Looking for a <span class="text-[#b6d561]">Digital marketer?</span></h1>
 			</div>
 
-			<div class="absolute bottom-[1vw] left-1/2 -translate-x-1/2 w-[2.25vw] bg-[#b6d561] aspect-square rounded-full bounce-div"></div>
+			<div class="absolute bottom-[1vw] left-1/2 -translate-x-1/2 w-[6vw] md:w-[2.25vw] bg-[#b6d561] aspect-square rounded-full bounce-div"></div>
 		</section>
 
 		<!-- Second Section -->
-		<section id="second-section" class="relative px-[15vw] py-[10vw]">
+		<section id="second-section" class="relative px-[5vw] md:px-[15vw] py-[20vw] md:py-[10vw] hidden lg:block">
 			<div class="circle w-[2vw] left-[16.5vw] top-[20vw] aspect-square rounded-full bg-[#b6d561] absolute"></div>
 			<div class="flex items-center justify-between gap-[5vw]">
 				<div class="flex items-center gap-[5vw]">
@@ -50,10 +61,10 @@
 						<img src="./public/images/home/accent-img.svg" class="w-[5vw]" alt="Image">
 					</div>
 					<div class="scroll-anim flex-1 h-full font-mont text-[2.5vw] font-bold space-y-[.4vw]">
-						<a href="#" class="duration-300 hover:text-[#b6d561] block w-max">BRANDING STUDIO</a>
-						<a href="#" class="duration-300 hover:text-[#b6d561] block w-max">MARKETING STUDIO</a>
-						<a href="#" class="duration-300 hover:text-[#b6d561] block w-max">ANIMATION STUDIO</a>
-						<a href="#" class="duration-300 hover:text-[#b6d561] block w-max">VFX STUDIO</a>
+						<a href="#branding-studio" class="duration-300 hover:text-[#b6d561] block w-max">BRANDING STUDIO</a>
+						<a href="#marketing-studio" class="duration-300 hover:text-[#b6d561] block w-max">MARKETING STUDIO</a>
+						<a href="#animation-studio" class="duration-300 hover:text-[#b6d561] block w-max">ANIMATION STUDIO</a>
+						<a href="#vfx-studio" class="duration-300 hover:text-[#b6d561] block w-max">VFX STUDIO</a>
 					</div>
 				</div>
 				<div>
@@ -62,35 +73,55 @@
 			</div>
 		</section>
 
-		<!-- About Section -->
-		<section id="about-section" class="relative px-[15vw] py-[5vw]">
-			<div class="heading flex items-center gap-[1.5vw]">
-				<div class="w-[3.5vw] bg-[#b6d561] aspect-square rounded-full"></div>
-				<h2 class="font-mont text-[3.25vw] font-semibold">About</h2>
+		<!-- Second Mobile Tablet Section -->
+		<section class="relative px-[5vw] md:px-[15vw] py-[20vw] md:py-[10vw] lg:hidden">
+			<div class="flex items-center justify-between gap-[5vw]">
+				<div class="flex items-center gap-[5vw]">
+					<div>
+						<img src="./public/images/home/accent-img.svg" class="w-[7vw] md:w-[5vw]" alt="Image">
+					</div>
+					<div class="scroll-anim flex-1 h-full font-mont text-[4.25vw] md:text-[2.5vw] font-bold space-y-[.4vw]">
+						<a href="#branding-studio" class="duration-300 hover:text-[#b6d561] block w-max">BRANDING STUDIO</a>
+						<a href="#marketing-studio" class="duration-300 hover:text-[#b6d561] block w-max">MARKETING STUDIO</a>
+						<a href="#animation-studio" class="duration-300 hover:text-[#b6d561] block w-max">ANIMATION STUDIO</a>
+						<a href="#vfx-studio" class="duration-300 hover:text-[#b6d561] block w-max">VFX STUDIO</a>
+					</div>
+				</div>
+				<div>
+					<img src="./public/images/home/studios-img.svg" class="w-[22.5vw] md:w-[17.5vw]" alt="Image">
+				</div>
 			</div>
-			<div id="info" class="mt-[2vw] md:pl-[5vw] font-mont text-[1.75vw] text-[#888888] font-medium">At Greyadstudio OPC Private Limited, we are captivated with bringing your logo to lifestyles with customized branding and digital advertising answers. As a main marketing agency in Kerala, we understand the nearby panorama and tailor our services—search engine marketing optimization, social media advertising and marketing, and content approach—to suit your specific desires. Our crew, pushed by means of creativity and a commitment to excellence, enables agencies from startups to mounted corporations to establish their online presence. Partner with us, and let's boost your brand together in Kerala's dynamic market.</div>
+		</section>
+
+		<!-- About Section -->
+		<section id="about-section" class="relative px-[5vw] py-[20vw] md:px-[15vw] md:py-[10vw] lg:py-[5vw]">
+			<div class="heading flex items-center gap-[3vw] md:gap-[1.5vw]">
+				<div class="w-[5vw] md:w-[3.5vw] bg-[#b6d561] aspect-square rounded-full lg:invisible"></div>
+				<h2 class="font-mont text-[5vw] md:text-[3.25vw] font-semibold">About</h2>
+			</div>
+			<div id="info" class="mt-[4vw] md:mt-[2vw] md:pl-[5vw] font-mont text-[3.25vw] md:text-[1.75vw] text-[#888888] font-medium">At Greyadstudio OPC Private Limited, we are captivated with bringing your logo to lifestyles with customized branding and digital advertising answers. As a main marketing agency in Kerala, we understand the nearby panorama and tailor our services—search engine marketing optimization, social media advertising and marketing, and content approach—to suit your specific desires. Our crew, pushed by means of creativity and a commitment to excellence, enables agencies from startups to mounted corporations to establish their online presence. Partner with us, and let's boost your brand together in Kerala's dynamic market.</div>
 		</section>
 
 		<!-- Service Sections -->
-		<section>
-			<div id="branding-studio" class="px-[15vw] py-[6vw] snap-start">
-				<div class="flex gap-[5vw]">
+		<section id="branding-studio">
+			<div class="px-[5vw] md:px-[15vw] py-[22.5vw] md:py-[10vw] lg:py-[6vw]">
+				<div class="flex gap-[8vw] md:gap-[5vw]">
 					<div class="flex relative">
-						<h2 class="relative font-mont flex flex-col gap-[6vw] font-bold text-[#8A8A8A] text-[6vw] leading-[1]  [writing-mode:vertical-rl] rotate-180">
+						<h2 class="relative font-mont flex flex-col gap-[10vw] md:gap-[6vw] font-bold text-[#8A8A8A] text-[10vw] md:text-[6vw] leading-[1]  [writing-mode:vertical-rl] rotate-180">
 							<span>BRANDING</span>
-							<img src="./public/images/home/accent-img.svg" class="w-[5.5vw] absolute left-1/2 -translate-x-1/2 top-0" alt="Image">
+							<img src="./public/images/home/accent-img.svg" class="w-[8vw] md:w-[5.5vw] absolute left-1/2 -translate-x-1/2 top-0" alt="Image">
 							<span>STUDIO</span>
 						</h2>
 					</div>
 					<div class="flex-1">
 						<div>
-							<div class="aspect-[16/6.5] bg-[#B7D6616E] rounded-[1vw] relative flex justify-center items-center">
-								<p class="absolute z-0 left-1/2 -translate-x-1/2 bottom-[.25vw] leading-[1] w-max text-[5.5vw] font-mont font-bold text-transparent [-webkit-text-stroke:1px_#0000004F]">BRANDING</p>
-								<img src="./public/images/home/branding.png" class="relative z-[1] w-[9.5vw]" alt="Image">
+							<div class="aspect-[16/14] md:aspect-[16/6.5] bg-[#B7D6616E] rounded-[3vw] md:rounded-[1vw] relative flex justify-center items-center">
+								<p class="hidden md:block absolute z-0 left-1/2 -translate-x-1/2 bottom-[1vw] md:bottom-[.25vw] leading-[1] w-max text-[6vw] md:text-[5.5vw] font-mont font-bold text-transparent [-webkit-text-stroke:1px_#0000004F]">BRANDING</p>
+								<img src="./public/images/home/branding.png" class="relative z-[1] w-[20vw] md:w-[9.5vw]" alt="Image">
 							</div>
-							<div class="mt-[1.5vw] font-mont text-[1.2vw] text-[#888888] font-medium md:w-[70%]">Turning Ideas into Iconic Brand Experiences Introducing the Minds Behind Our Branding Magic</div>
-							<a href="#" class="w-max bg-[#B7D661] border border-[#B7D661] text-[#000000] hover:bg-transparent duration-300 inline-block mt-[2vw] py-[.75vw] px-[2vw] rounded-[1vw]">
-								<p class="font-mont text-[1.2vw] font-bold text-center">Know More</p>
+							<div class="mt-[2.5vw] md:mt-[1.5vw] font-mont text-[2.25vw] leading-[1.3] md:leading-normal md:text-[1.2vw] text-[#888888] font-medium md:w-[70%]">Turning Ideas into Iconic Brand Experiences Introducing the Minds Behind Our Branding Magic</div>
+							<a href="./studio/branding-studio.html" class="w-max bg-[#B7D661] border border-[#B7D661] text-[#000000] hover:bg-transparent duration-300 inline-block mt-[3vw] md:mt-[2vw] py-[1vw] md:py-[.75vw] px-[4vw] md:px-[2vw] rounded-[1vw]">
+								<p class="font-mont text-[2.25vw] md:text-[1.2vw] font-bold text-center">Know More</p>
 							</a>
 						</div>
 					</div>
@@ -98,25 +129,25 @@
 			</div>
 		</section>
 
-		<section>
-			<div id="marketing-studio" class="px-[15vw] py-[6vw] snap-start">
-				<div class="flex gap-[5vw]">
-					<div class="flex">
-						<h2 class="relative font-mont flex flex-col gap-[6vw] font-bold text-[#8A8A8A] text-[6vw] leading-[1]  [writing-mode:vertical-rl] rotate-180">
+		<section id="marketing-studio">
+			<div class="px-[5vw] md:px-[15vw] py-[22.5vw] md:py-[10vw] lg:py-[6vw]">
+				<div class="flex gap-[8vw] md:gap-[5vw]">
+					<div class="flex relative">
+						<h2 class="relative font-mont flex flex-col gap-[10vw] md:gap-[6vw] font-bold text-[#8A8A8A] text-[10vw] md:text-[6vw] leading-[1]  [writing-mode:vertical-rl] rotate-180">
 							<span>MARKETING</span>
-							<img src="./public/images/home/accent-img.svg" class="w-[5.5vw] absolute left-1/2 -translate-x-1/2 top-0" alt="Image">
+							<img src="./public/images/home/accent-img.svg" class="w-[8vw] md:w-[5.5vw] absolute left-1/2 -translate-x-1/2 top-0" alt="Image">
 							<span>STUDIO</span>
 						</h2>
 					</div>
 					<div class="flex-1">
 						<div>
-							<div class="aspect-[16/6.5] bg-[#B7D6616E] rounded-[1vw] relative flex justify-center items-center">
-								<p class="absolute z-0 left-1/2 -translate-x-1/2 bottom-[.25vw] leading-[1] w-max text-[5.5vw] font-mont font-bold text-transparent [-webkit-text-stroke:1px_#0000004F]">MARKETING</p>
-								<img src="./public/images/home/marketing.png" class="relative z-[1] w-[9.5vw]" alt="Image">
+							<div class="aspect-[16/14] md:aspect-[16/6.5] bg-[#B7D6616E] rounded-[3vw] md:rounded-[1vw] relative flex justify-center items-center">
+								<p class="hidden md:block absolute z-0 left-1/2 -translate-x-1/2 bottom-[1vw] md:bottom-[.25vw] leading-[1] w-max text-[6vw] md:text-[5.5vw] font-mont font-bold text-transparent [-webkit-text-stroke:1px_#0000004F]">MARKETING</p>
+								<img src="./public/images/home/marketing.png" class="relative z-[1] w-[21vw] md:w-[9.5vw]" alt="Image">
 							</div>
-							<div class="mt-[1.5vw] font-mont text-[1.2vw] text-[#888888] font-medium md:w-[70%]">Turning Ideas into Iconic Brand Experiences Introducing the Minds Behind Our Branding Magic</div>
-							<a href="#" class="w-max bg-[#B7D661] border border-[#B7D661] text-[#000000] hover:bg-transparent duration-300 inline-block mt-[2vw] py-[.75vw] px-[2vw] rounded-[1vw]">
-								<p class="font-mont text-[1.2vw] font-bold text-center">Know More</p>
+							<div class="mt-[2.5vw] md:mt-[1.5vw] font-mont text-[2.25vw] leading-[1.3] md:leading-normal md:text-[1.2vw] text-[#888888] font-medium md:w-[70%]">Turning Ideas into Iconic Brand Experiences Introducing the Minds Behind Our Branding Magic</div>
+							<a href="./studio/marketing-studio.html" class="w-max bg-[#B7D661] border border-[#B7D661] text-[#000000] hover:bg-transparent duration-300 inline-block mt-[3vw] md:mt-[2vw] py-[1vw] md:py-[.75vw] px-[4vw] md:px-[2vw] rounded-[1vw]">
+								<p class="font-mont text-[2.25vw] md:text-[1.2vw] font-bold text-center">Know More</p>
 							</a>
 						</div>
 					</div>
@@ -124,25 +155,25 @@
 			</div>
 		</section>
 
-		<section>
-			<div id="animation-studio" class="px-[15vw] py-[6vw] snap-start">
-				<div class="flex gap-[5vw]">
+		<section id="animation-studio">
+			<div class="px-[5vw] md:px-[15vw] py-[22.5vw] md:py-[10vw] lg:py-[6vw]">
+				<div class="flex gap-[8vw] md:gap-[5vw]">
 					<div class="flex">
-						<h2 class="relativefont-mont flex flex-col gap-[6vw] font-bold text-[#8A8A8A] text-[6vw] leading-[1]  [writing-mode:vertical-rl] rotate-180">
+						<h2 class="relative font-mont flex flex-col gap-[10vw] md:gap-[6vw] font-bold text-[#8A8A8A] text-[10vw] md:text-[6vw] leading-[1]  [writing-mode:vertical-rl] rotate-180">
 							<span>ANIMATION</span>
-							<img src="./public/images/home/accent-img.svg" class="w-[5.5vw] absolute left-1/2 -translate-x-1/2 top-0" alt="Image">
+							<img src="./public/images/home/accent-img.svg" class="w-[8vw] md:w-[5.5vw] absolute left-1/2 -translate-x-1/2 top-0" alt="Image">
 							<span>STUDIO</span>
 						</h2>
 					</div>
 					<div class="flex-1">
 						<div>
-							<div class="aspect-[16/6.5] bg-[#B7D6616E] rounded-[1vw] relative flex justify-center items-center">
-								<p class="absolute z-0 left-1/2 -translate-x-1/2 bottom-[.25vw] leading-[1] w-max text-[5.5vw] font-mont font-bold text-transparent [-webkit-text-stroke:1px_#0000004F]">ANIMATION</p>
-								<img src="./public/images/home/animation.png" class="relative z-[1] w-[13vw]" alt="Image">
+							<div class="aspect-[16/14] md:aspect-[16/6.5] bg-[#B7D6616E] rounded-[3vw] md:rounded-[1vw] relative flex justify-center items-center">
+								<p class="hidden md:block absolute z-0 left-1/2 -translate-x-1/2 bottom-[1vw] md:bottom-[.25vw] leading-[1] w-max text-[6vw] md:text-[5.5vw] font-mont font-bold text-transparent [-webkit-text-stroke:1px_#0000004F]">ANIMATION</p>
+								<img src="./public/images/home/animation.png" class="relative z-[1] w-[29.5vw] md:w-[13vw]" alt="Image">
 							</div>
-							<div class="mt-[1.5vw] font-mont text-[1.2vw] text-[#888888] font-medium md:w-[70%]">Turning Ideas into Iconic Brand Experiences Introducing the Minds Behind Our Branding Magic</div>
-							<a href="#" class="w-max bg-[#B7D661] border border-[#B7D661] text-[#000000] hover:bg-transparent duration-300 inline-block mt-[2vw] py-[.75vw] px-[2vw] rounded-[1vw]">
-								<p class="font-mont text-[1.2vw] font-bold text-center">Know More</p>
+							<div class="mt-[2.5vw] md:mt-[1.5vw] font-mont text-[2.25vw] leading-[1.3] md:leading-normal md:text-[1.2vw] text-[#888888] font-medium md:w-[70%]">Turning Ideas into Iconic Brand Experiences Introducing the Minds Behind Our Branding Magic</div>
+							<a href="./studio/animation-studio.html" class="w-max bg-[#B7D661] border border-[#B7D661] text-[#000000] hover:bg-transparent duration-300 inline-block mt-[3vw] md:mt-[2vw] py-[1vw] md:py-[.75vw] px-[4vw] md:px-[2vw] rounded-[1vw]">
+								<p class="font-mont text-[2.25vw] md:text-[1.2vw] font-bold text-center">Know More</p>
 							</a>
 						</div>
 					</div>
@@ -150,25 +181,25 @@
 			</div>
 		</section>
 
-		<section>
-			<div id="vfx-studio" class="px-[15vw] py-[6vw] snap-start">
-				<div class="flex gap-[5vw]">
+		<section id="vfx-studio">
+			<div class="px-[5vw] md:px-[15vw] py-[22.5vw] md:py-[10vw] lg:py-[6vw]">
+				<div class="flex gap-[8vw] md:gap-[5vw]">
 					<div class="flex">
-						<h2 class="relative font-mont flex flex-col gap-[6vw] font-bold text-[#8A8A8A] text-[6vw] leading-[1]  [writing-mode:vertical-rl] rotate-180">
+						<h2 class="relative font-mont flex flex-col gap-[10vw] md:gap-[6vw] font-bold text-[#8A8A8A] text-[10vw] md:text-[6vw] leading-[1]  [writing-mode:vertical-rl] rotate-180">
 							<span>VFX</span>
-							<img src="./public/images/home/accent-img.svg" class="w-[5.5vw] absolute left-1/2 -translate-x-1/2 top-0" alt="Image">
+							<img src="./public/images/home/accent-img.svg" class="w-[8vw] md:w-[5.5vw] absolute left-1/2 -translate-x-1/2 top-0" alt="Image">
 							<span>STUDIO</span>
 						</h2>
 					</div>
 					<div class="flex-1">
 						<div>
-							<div class="aspect-[16/6.5] bg-[#B7D6616E] rounded-[1vw] relative flex justify-center items-center">
-								<p class="absolute z-0 left-1/2 -translate-x-1/2 bottom-[.25vw] leading-[1] w-max text-[5.5vw] font-mont font-bold text-transparent [-webkit-text-stroke:1px_#0000004F]">VFX</p>
-								<img src="./public/images/home/vfx.png" class="relative z-[1] w-[10vw]" alt="Image">
+							<div class="aspect-[16/14] md:aspect-[16/6.5] bg-[#B7D6616E] rounded-[3vw] md:rounded-[1vw] relative flex justify-center items-center">
+								<p class="hidden md:block absolute z-0 left-1/2 -translate-x-1/2 bottom-[1vw] md:bottom-[.25vw] leading-[1] w-max text-[6vw] md:text-[5.5vw] font-mont font-bold text-transparent [-webkit-text-stroke:1px_#0000004F]">VFX</p>
+								<img src="./public/images/home/vfx.png" class="relative z-[1] w-[24vw] md:w-[10vw]" alt="Image">
 							</div>
-							<div class="mt-[1.5vw] font-mont text-[1.2vw] text-[#888888] font-medium md:w-[70%]">Turning Ideas into Iconic Brand Experiences Introducing the Minds Behind Our Branding Magic</div>
-							<a href="#" class="w-max bg-[#B7D661] border border-[#B7D661] text-[#000000] hover:bg-transparent duration-300 inline-block mt-[2vw] py-[.75vw] px-[2vw] rounded-[1vw]">
-								<p class="font-mont text-[1.2vw] font-bold text-center">Know More</p>
+							<div class="mt-[2.5vw] md:mt-[1.5vw] font-mont text-[2.25vw] leading-[1.3] md:leading-normal md:text-[1.2vw] text-[#888888] font-medium md:w-[70%]">Turning Ideas into Iconic Brand Experiences Introducing the Minds Behind Our Branding Magic</div>
+							<a href="./studio/vfx-studio.html" class="w-max bg-[#B7D661] border border-[#B7D661] text-[#000000] hover:bg-transparent duration-300 inline-block mt-[3vw] md:mt-[2vw] py-[1vw] md:py-[.75vw] px-[4vw] md:px-[2vw] rounded-[1vw]">
+								<p class="font-mont text-[2.25vw] md:text-[1.2vw] font-bold text-center">Know More</p>
 							</a>
 						</div>
 					</div>
@@ -177,29 +208,29 @@
 		</section>
 	</main>
 
-	<footer class=" bg-[#1E1E1E] mt-[10vw] px-[5vw] py-[6vw]">
-		<div class="flex items-center justify-between">
+	<footer class=" bg-[#1E1E1E] mt-[6vw] px-[5vw] py-[8vw] md:py-[6vw]">
+		<div class="flex flex-col md:flex-row gap-[5vw] items-center justify-between">
 			<a href="index.html">
-				<img src="./public/images/common/footer-logo.png" class="w-[15vw]" alt="Logo image">
+				<img src="./public/images/common/footer-logo.png" class="w-[27.5vw] md:w-[15vw]" alt="Logo image">
 			</a>
 
-			<div class="flex items-center gap-[1vw]">
+			<div class="flex items-center gap-[2vw] md:gap-[1vw]">
 				<a href="#" class="group">
-					<img src="./public/images/common/linkedin.png" class="h-[1.95vw] group-hover:-translate-y-[.5vw] duration-300" alt="Logo">
+					<img src="./public/images/common/linkedin.png" class="h-[3vw] md:h-[1.95vw] group-hover:-translate-y-[.5vw] duration-300" alt="Logo">
 				</a>
 				<a href="#" class="group">
-					<img src="./public/images/common/x.png" class="h-[1.75vw] group-hover:-translate-y-[.5vw] duration-300" alt="Logo">
+					<img src="./public/images/common/x.png" class="h-[2.85vw] md:h-[1.75vw] group-hover:-translate-y-[.5vw] duration-300" alt="Logo">
 				</a>
 				<a href="#" class="group">
-					<img src="./public/images/common/fb.png" class="h-[2vw] group-hover:-translate-y-[.5vw] duration-300" alt="Logo">
+					<img src="./public/images/common/fb.png" class="h-[3.25vw] md:h-[2vw] group-hover:-translate-y-[.5vw] duration-300" alt="Logo">
 				</a>
 				<a href="#" class="group">
-					<img src="./public/images/common/insta.png" class="h-[2vw] group-hover:-translate-y-[.5vw] duration-300" alt="Logo">
+					<img src="./public/images/common/insta.png" class="h-[3.25vw] md:h-[2vw] group-hover:-translate-y-[.5vw] duration-300" alt="Logo">
 				</a>
 			</div>
 		</div>
-		<div class="text-center">
-			<p class="font-mont text-[1vw] text-white">Copyright © 2024 Greyadstudio</p>
+		<div class="text-center mt-[6vw] md:mt-0">
+			<p class="font-mont text-[2vw] md:text-[1vw] text-white">Copyright © 2024 Greyadstudio</p>
 		</div>
 	</footer>
 
@@ -210,6 +241,7 @@
 	<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 
 	<script src="./gsap.js"></script>
+	<script src="./script.js"></script>
 </body>
 
 </html>

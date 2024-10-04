@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="./src/output.css">
+	<title>GreyadStudio</title>
+</head>
+
+<body class="antialiased">
+	<header class="bg-[#f2f7f5] relative">
+		<div class="flex items-center justify-between px-[5vw] md:px-[6vw] h-[8vh] md:h-[6vh] lg:h-[12vh]">
+			<a href="index.html">
+				<img src="./public/images/logo.png" class="w-[30vw] md:w-[15vw]" alt="Logo">
+			</a>
+			<button id="nav-btn" class="group">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[6vw] md:w-[2.5vw] duration-300 group-hover:text-[#b6d561]">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+				</svg>
+			</button>
+		</div>
+
+		<div id="floating-nav" class="bg-white shadow-md absolute right-[6vw] top-[10vh] md:top-[8vh] lg:top-[14vh] rounded-[2vw] md:rounded-[1vw] w-[40vw] md:w-[17.5vw] z-[9] overflow-hidden translate-y-[2vw] opacity-0 duration-300">
+			<ul class="font-mont text-[3vw] md:text-[1.15vw] font-medium py-[1vw] md:py-0">
+				<li><a href="team.html" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Our Team</a></li>
+				<li><a href="#branding-studio" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Branding Studio</a></li>
+				<li><a href="#marketing-studio" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Marketing Studio</a></li>
+				<li><a href="#animation-studio" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Animation Studio</a></li>
+				<li><a href="#vfx-studio" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Vfx Studio</a></li>
+				<li><a href="contact.html" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Contact</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<main>
+		<!-- Landing Section -->
+		<section class="relative flex flex-col md:flex-row items-start md:h-[50vh] lg:h-[88vh] lg:items-center">
+			<div class="relative h-80 flex items-start w-full md:h-full md:w-1/2">
+				<img alt="" src="https://images.unsplash.com/photo-1630450202872-e0829c9d6172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" class="absolute inset-0 h-full w-full object-cover" />
+			</div>
+			<div class="w-full px-4 py-12 sm:px-6 sm:py-16 md:w-1/2 lg:px-8 lg:py-24 font-mont">
+				<div class="mx-auto max-w-lg text-center">
+					<h1 class="text-2xl font-bold sm:text-3xl">Get started today!</h1>
+				</div>
+
+				<form action="#" class="mx-auto mb-0 mt-8 max-w-md space-y-4">
+					<div>
+						<label for="name" class="sr-only">Name</label>
+
+						<div class="relative">
+							<input type="text" class="w-full rounded-lg focus:ring-[#b6d561] focus:border-[#b6d561] border-gray-200 p-4 md:p-3 lg:p-4 text-sm md:text-xs lg:text-sm shadow-sm" placeholder="Enter name" />
+						</div>
+					</div>
+
+					<div>
+						<label for="email" class="sr-only">Email</label>
+
+						<div class="relative">
+							<input type="email" class="w-full rounded-lg focus:ring-[#b6d561] focus:border-[#b6d561] border-gray-200 p-4 md:p-3 lg:p-4 text-sm md:text-xs lg:text-sm shadow-sm" placeholder="Enter email" />
+						</div>
+					</div>
+
+					<div>
+						<label for="phone" class="sr-only">Phone</label>
+
+						<div class="relative">
+							<input type="tel" class="w-full rounded-lg focus:ring-[#b6d561] focus:border-[#b6d561] border-gray-200 p-4 md:p-3 lg:p-4 text-sm md:text-xs lg:text-sm shadow-sm" placeholder="Enter contact number" />
+						</div>
+					</div>
+
+					<div>
+						<label for="message" class="sr-only">Message</label>
+
+						<div class="relative">
+							<textarea type="tel" rows="4" class="w-full rounded-lg focus:ring-[#b6d561] focus:border-[#b6d561] border-gray-200 p-4 md:p-3 lg:p-4 text-sm md:text-xs lg:text-sm shadow-sm" placeholder="Enter message"></textarea>
+						</div>
+					</div>
+
+					<div class="flex items-center justify-center">
+						<button type="submit" class="inline-block w-full rounded-lg bg-[#b6d561] border border-[#b6d561] duration-300 hover:bg-transparent hover:text-[#b6d561] px-5 py-3 text-sm font-bold text-white">
+							Submit
+						</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<section class="relative px-[5vw] py-[5vw]">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.646360217696!2d76.27223267503086!3d9.980349090124024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080dccd56b51a1%3A0x676c13c5ba2ae262!2sMarine%20Drive%20Kochi!5e1!3m2!1sen!2sin!4v1728069684273!5m2!1sen!2sin" class="w-full h-[50vh] md:h-[40vh] lg:h-[70vh]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</section>
+	</main>
+
+	<footer class=" bg-[#1E1E1E] px-[5vw] py-[8vw] md:py-[6vw]">
+		<div class="flex flex-col md:flex-row gap-[5vw] items-center justify-between">
+			<a href="index.html">
+				<img src="./public/images/common/footer-logo.png" class="w-[27.5vw] md:w-[15vw]" alt="Logo image">
+			</a>
+
+			<div class="flex items-center gap-[2vw] md:gap-[1vw]">
+				<a href="#" class="group">
+					<img src="./public/images/common/linkedin.png" class="h-[3vw] md:h-[1.95vw] group-hover:-translate-y-[.5vw] duration-300" alt="Logo">
+				</a>
+				<a href="#" class="group">
+					<img src="./public/images/common/x.png" class="h-[2.85vw] md:h-[1.75vw] group-hover:-translate-y-[.5vw] duration-300" alt="Logo">
+				</a>
+				<a href="#" class="group">
+					<img src="./public/images/common/fb.png" class="h-[3.25vw] md:h-[2vw] group-hover:-translate-y-[.5vw] duration-300" alt="Logo">
+				</a>
+				<a href="#" class="group">
+					<img src="./public/images/common/insta.png" class="h-[3.25vw] md:h-[2vw] group-hover:-translate-y-[.5vw] duration-300" alt="Logo">
+				</a>
+			</div>
+		</div>
+		<div class="text-center mt-[6vw] md:mt-0">
+			<p class="font-mont text-[2vw] md:text-[1vw] text-white">Copyright © 2024 Greyadstudio</p>
+		</div>
+	</footer>
+
+	<!-- GSAP Script  -->
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+	<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+	<script src="./gsap.js"></script>
+	<script src="./script.js"></script>
+</body>
+
+</html>

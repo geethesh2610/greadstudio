@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     gsap.registerPlugin(ScrollTrigger);
 
+    // Lenis Code Start
     const lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.005 - Math.pow(2, -10 * t)),
@@ -27,6 +28,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     requestAnimationFrame(raf);
+    // Lenis Code End
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            lenis.scrollTo(this.getAttribute("href"));
+        });
+    });
 
     const section = document.querySelector("#second-section");
     const textContainer = section.querySelector(".scroll-anim");
@@ -52,40 +60,39 @@ document.addEventListener("DOMContentLoaded", (event) => {
         tl.to(el, { yPercent: 0, opacity: 1 }, index);
     });
 
-    // const xOffset = 10;
-    // const yOffset = 10;
+    const xOffset = 10;
+    const yOffset = 10;
 
-    // gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: "#second-section",
-    //         start: "top top",
-    //         end: "bottom 40%",
-    //         scrub: 1,
-    //         markers:true
-    //     },
-    // }).to("#second-section .circle", {
-    //     duration: 1,
-    //     x: () => {
-    //         const secondSection = document.querySelector("#second-section");
-    //         const aboutSection = document.querySelector("#about-section");
-    //         const startCircle = document.querySelector("#second-section .circle");
-    //         const endCircle = document.querySelector("#about-section .heading .bg-\\[\\#b6d561\\]");
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: "#second-section",
+            start: "top top",
+            end: "bottom 40%",
+            scrub: 2,
+        },
+    }).to("#second-section .circle", {
+        duration: 1,
+        x: () => {
+            const secondSection = document.querySelector("#second-section");
+            const aboutSection = document.querySelector("#about-section");
+            const startCircle = document.querySelector("#second-section .circle");
+            const endCircle = document.querySelector("#about-section .heading .bg-\\[\\#b6d561\\]");
 
-    //         return endCircle.getBoundingClientRect().left - secondSection.getBoundingClientRect().left - startCircle.offsetLeft + xOffset;
-    //     },
-    //     y: () => {
-    //         const secondSection = document.querySelector("#second-section");
-    //         const aboutSection = document.querySelector("#about-section");
-    //         const startCircle = document.querySelector("#second-section .circle");
-    //         const endCircle = document.querySelector("#about-section .heading .bg-\\[\\#b6d561\\]");
+            return endCircle.getBoundingClientRect().left - secondSection.getBoundingClientRect().left - startCircle.offsetLeft + xOffset;
+        },
+        y: () => {
+            const secondSection = document.querySelector("#second-section");
+            const aboutSection = document.querySelector("#about-section");
+            const startCircle = document.querySelector("#second-section .circle");
+            const endCircle = document.querySelector("#about-section .heading .bg-\\[\\#b6d561\\]");
 
-    //         return aboutSection.getBoundingClientRect().top - secondSection.getBoundingClientRect().top + endCircle.offsetTop - startCircle.offsetTop + yOffset;
-    //     },
-    //     scale: () => {
-    //         const startCircle = document.querySelector("#second-section .circle");
-    //         const endCircle = document.querySelector("#about-section .heading .bg-\\[\\#b6d561\\]");
-    //         return endCircle.offsetWidth / startCircle.offsetWidth;
-    //     },
-    //     ease: "power2.inOut",
-    // });
+            return aboutSection.getBoundingClientRect().top - secondSection.getBoundingClientRect().top + endCircle.offsetTop - startCircle.offsetTop + yOffset;
+        },
+        scale: () => {
+            const startCircle = document.querySelector("#second-section .circle");
+            const endCircle = document.querySelector("#about-section .heading .bg-\\[\\#b6d561\\]");
+            return endCircle.offsetWidth / startCircle.offsetWidth;
+        },
+        ease: "power2.inOut",
+    });
 });
