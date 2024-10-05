@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../src/output.css">
     <title>Animation Studio - GreyadStudio</title>
 </head>
 
 <body class="antialiased">
-    <header class="bg-[#f2f7f5] relative">
+    <header data-aos="fade-down" class="bg-[#f2f7f5] relative z-[999]">
         <div class="flex items-center justify-between px-[5vw] md:px-[6vw] h-[8vh] md:h-[6vh] lg:h-[12vh]">
             <a href="../index.html">
                 <img src="../public/images/logo.png" class="w-[30vw] md:w-[15vw]" alt="Logo">
@@ -44,7 +44,7 @@
 
     <main>
         <!-- Landing Section -->
-        <section class="relative h-[92vh] md:h-[40vh] lg:h-[88vh] flex items-center justify-center">
+        <section data-aos="fade-up" data-aos-delay="300" class="relative h-[92vh] md:h-[40vh] lg:h-[88vh] flex items-center justify-center">
             <div class="px-[6vw] flex w-full h-full items-center justify-center">
                 <h2 class="relative font-mont flex flex-col gap-[17.5vw] md:gap-[6vw] font-bold text-[#8A8A8A] text-[18.5vw] md:text-[6vw] leading-[1]  [writing-mode:vertical-rl] rotate-180">
                     <span>ANIMATION</span>
@@ -55,8 +55,8 @@
         </section>
 
         <!-- About Section -->
-        <section class="relative px-[5vw] md:px-[6vw] py-[10vw] md:py-[10vw] lg:py-[5vw]">
-            <div class="aspect-video md:aspect-[16/6] bg-[#B7D6616E] rounded-[3vw] md:rounded-[1vw] relative flex justify-center items-center">
+        <section data-aos="fade-up" data-aos-delay="300" class="relative px-[5vw] md:px-[6vw] py-[10vw] md:py-[10vw] lg:py-[5vw]">
+            <div  class="aspect-video md:aspect-[16/6] bg-[#B7D6616E] rounded-[3vw] md:rounded-[1vw] relative flex justify-center items-center">
                 <img src="../public/images/home/animation.png" class="relative z-[1] h-[70%]" alt="Image">
             </div>
             <p class="font-mont text-[3.25vw] md:text-[1.75vw] text-[#000000] font-bold mt-[3vw] md:mt-[2vw]">What is animation?</p>
@@ -65,22 +65,22 @@
 
         <!-- Works Sections -->
         <section class="relative px-[5vw] md:px-[6vw] py-[20vw] md:py-[10vw] lg:py-[5vw]">
-            <p class="font-mont text-[3.25vw] md:text-[1.75vw] text-[#000000] font-bold mt-[2vw]">Latest Works</p>
+            <p data-aos="fade-up" data-aos-delay="300" class="font-mont text-[3.25vw] md:text-[1.75vw] text-[#000000] font-bold mt-[2vw]">Latest Works</p>
             <div class="flex flex-col md:flex-row gap-[3vw] md:gap-[1vw] mt-[3vw]">
-                <div class="aspect-[16/22] flex-1 bg-[#B7D6616E] rounded-[3vw] md:rounded-[1.5vw] relative flex justify-center items-center">
+                <div data-aos="fade-up" data-aos-delay="300" class="aspect-[16/22] flex-1 bg-[#B7D6616E] rounded-[3vw] md:rounded-[1.5vw] relative flex justify-center items-center">
                     <img src="../public/images/home/animation.png" class="relative z-[1] h-[40%]" alt="Image">
                 </div>
-                <div class="aspect-[16/22] flex-1 bg-[#B7D6616E] rounded-[3vw] md:rounded-[1.5vw] relative flex justify-center items-center">
+                <div data-aos="fade-up" data-aos-delay="500" class="aspect-[16/22] flex-1 bg-[#B7D6616E] rounded-[3vw] md:rounded-[1.5vw] relative flex justify-center items-center">
                     <img src="../public/images/home/animation.png" class="relative z-[1] h-[40%]" alt="Image">
                 </div>
-                <div class="aspect-[16/22] flex-1 bg-[#B7D6616E] rounded-[3vw] md:rounded-[1.5vw] relative flex justify-center items-center">
+                <div data-aos="fade-up" data-aos-delay="700" class="aspect-[16/22] flex-1 bg-[#B7D6616E] rounded-[3vw] md:rounded-[1.5vw] relative flex justify-center items-center">
                     <img src="../public/images/home/animation.png" class="relative z-[1] h-[40%]" alt="Image">
                 </div>
             </div>
         </section>
 
 
-        <section class="relative px-[5vw] md:px-[6vw] pb-[20vw] md:py-[10vw] lg:py-[5vw]">
+        <section data-aos="fade-up" data-aos-delay="300" class="relative px-[5vw] md:px-[6vw] pb-[20vw] md:py-[10vw] lg:py-[5vw]">
             <div class="w-full font-mont text-[3.25vw] md:text-[1.75vw] text-[#888888] font-medium">At Greyadstudio OPC Private Limited, we are captivated with bringing your logo to lifestyles with customized branding and digital advertising answers. As a main marketing agency in Kerala, we understand the nearby panorama and tailor our</div>
         </section>
 
@@ -113,6 +113,7 @@
     </footer>
 
     <!-- GSAP Script  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 

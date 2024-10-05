@@ -1111,6 +1111,14 @@ select {
   z-index: 9;
 }
 
+.z-\[\] {
+  z-index: ;
+}
+
+.z-\[999\] {
+  z-index: 999;
+}
+
 .float-start {
   float: inline-start;
 }

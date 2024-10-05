@@ -12,13 +12,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="./src/output.css">
 	<title>GreyadStudio</title>
 </head>
 
 <body class="antialiased">
-	<header class="bg-[#f2f7f5] relative">
+	<header data-aos="fade-down" class="bg-[#f2f7f5] relative z-[999]">
 		<div class="flex items-center justify-between px-[5vw] md:px-[6vw] h-[8vh] md:h-[6vh] lg:h-[12vh]">
 			<a href="#">
 				<img src="./public/images/logo.png" class="w-[30vw] md:w-[15vw]" alt="Logo">
@@ -44,7 +44,7 @@
 
 	<main>
 		<!-- Landing Section -->
-		<section class="relative h-[92dvh] md:h-[40vh] lg:h-[88vh] flex items-center justify-center">
+		<section id="landing-section" data-aos="fade-up" data-aos-delay="300" class="relative h-[92dvh] md:h-[40vh] lg:h-[88vh] flex items-center justify-center">
 			<div class="pb-[5vw] px-[6vw]">
 				<h1 class="font-mont font-semibold text-[6.5vw] md:text-[2.75vw] text-center">Looking for a <span class="text-[#b6d561]">Digital marketer?</span></h1>
 			</div>
@@ -74,7 +74,7 @@
 		</section>
 
 		<!-- Second Mobile Tablet Section -->
-		<section class="relative px-[5vw] md:px-[15vw] py-[20vw] md:py-[10vw] lg:hidden">
+		<section data-aos="fade-up" data-aos-delay="300" class="relative px-[5vw] md:px-[15vw] py-[20vw] md:py-[10vw] lg:hidden">
 			<div class="flex items-center justify-between gap-[5vw]">
 				<div class="flex items-center gap-[5vw]">
 					<div>
@@ -103,7 +103,7 @@
 		</section>
 
 		<!-- Service Sections -->
-		<section id="branding-studio">
+		<section data-aos="fade-up" data-aos-delay="300" class="studio-sections" id="branding-studio">
 			<div class="px-[5vw] md:px-[15vw] py-[22.5vw] md:py-[10vw] lg:py-[6vw]">
 				<div class="flex gap-[8vw] md:gap-[5vw]">
 					<div class="flex relative">
@@ -129,7 +129,7 @@
 			</div>
 		</section>
 
-		<section id="marketing-studio">
+		<section data-aos="fade-up" data-aos-delay="300" class="studio-sections" id="marketing-studio">
 			<div class="px-[5vw] md:px-[15vw] py-[22.5vw] md:py-[10vw] lg:py-[6vw]">
 				<div class="flex gap-[8vw] md:gap-[5vw]">
 					<div class="flex relative">
@@ -155,7 +155,7 @@
 			</div>
 		</section>
 
-		<section id="animation-studio">
+		<section data-aos="fade-up" data-aos-delay="300" class="studio-sections" id="animation-studio">
 			<div class="px-[5vw] md:px-[15vw] py-[22.5vw] md:py-[10vw] lg:py-[6vw]">
 				<div class="flex gap-[8vw] md:gap-[5vw]">
 					<div class="flex">
@@ -181,7 +181,7 @@
 			</div>
 		</section>
 
-		<section id="vfx-studio">
+		<section data-aos="fade-up" data-aos-delay="300" class="studio-sections" id="vfx-studio">
 			<div class="px-[5vw] md:px-[15vw] py-[22.5vw] md:py-[10vw] lg:py-[6vw]">
 				<div class="flex gap-[8vw] md:gap-[5vw]">
 					<div class="flex">
@@ -235,6 +235,7 @@
 	</footer>
 
 	<!-- GSAP Script  -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 

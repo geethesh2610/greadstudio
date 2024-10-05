@@ -1,4 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
+    AOS.init();
+
     let navBtn = document.querySelector("#nav-btn");
     let floatingNav = document.querySelector("#floating-nav");
     let floatingNavAnchor = document.querySelectorAll("#floating-nav a");
