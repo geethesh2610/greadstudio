@@ -17,27 +17,58 @@
 </head>
 
 <body class="antialiased">
-	<header data-aos="fade-down" class="bg-[#f2f7f5] relative z-[999]">
-		<div class="flex items-center justify-between px-[5vw] md:px-[6vw] h-[8vh] md:h-[6vh] lg:h-[12vh]">
-			<a href="index.html">
-				<img src="./public/images/logo.png" class="w-[30vw] md:w-[15vw]" alt="Logo">
+	<header data-aos="fade-down" class="sticky top-0 z-[999]" x-data="{isHovered:false, activeEl:'work'}">
+		<div class="absolute w-full h-full bg-[#f2f7f5] left-0 top-0"></div>
+		<div class="flex items-center justify-between px-[5vw] md:px-[6vw] h-[8vh] md:h-[5vh] lg:h-[12vh] relative z-[1]">
+			<div class="flex items-center gap-[4vw]">
+				<a href="index.html" class="md:w-[15vw] inline-block relative md:h-[3.25vh] lg:h-[8vh]">
+					<img x-show="!isHovered" src="./public/images/logo.png" class="md:absolute w-[30vw] top-0 md:w-full h-auto" alt="Logo">
+					<img x-show="isHovered" src="./public/images/common/footer-logo.png" class="md:absolute top-0 w-[30vw] md:w-full h-auto" alt="Logo">
+				</a>
+				<nav class="hidden md:block">
+					<ul class="font-onest font-light text-[1.15vw] flex items-center" :class="isHovered?'text-white':'text-[#000000]'">
+						<li @mouseover="isHovered=true" class="flex items-center">
+							<p class="cursor-pointer" @mouseover="activeEl='about'">About</p>
+						</li>
+						<li @mouseover="isHovered=true" class="pl-[4vw] flex items-center">
+							<p class="cursor-pointer" @mouseover="activeEl='work'">Work</p>
+						</li>
+						<li @mouseover="isHovered=true" class="pl-[4vw] flex items-center">
+							<p class="cursor-pointer" @mouseover="activeEl='team'">Our Team</p>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<a href="contact.html" class="w-max hidden bg-[#B7D661] border border-[#B7D661] text-[#000000] hover:bg-transparent duration-300 md:inline-block py-[1vw] md:py-[.75vw] px-[4vw] md:px-[2vw] rounded-[1vw]">
+				<p class="font-onest text-[2.25vw] md:text-[1.2vw] font-semibold text-center">Reach Us</p>
 			</a>
-			<button id="nav-btn" class="group">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[6vw] md:w-[2.5vw] duration-300 group-hover:text-[#b6d561]">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-				</svg>
-			</button>
 		</div>
-
-		<div id="floating-nav" class="bg-white shadow-md absolute right-[6vw] top-[10vh] md:top-[8vh] lg:top-[14vh] rounded-[2vw] md:rounded-[1vw] w-[40vw] md:w-[17.5vw] z-[9] overflow-hidden translate-y-[2vw] opacity-0 duration-300">
-			<ul class="font-onest text-[3vw] md:text-[1.15vw] font-medium py-[1vw] md:py-0">
-				<li><a href="team.html" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Our Team</a></li>
-				<li><a href="./studio/branding-studio.html" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Branding Studio</a></li>
-				<li><a href="./studio/marketing-studio.html" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Marketing Studio</a></li>
-				<li><a href="./studio/animation-studio.html" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Animation Studio</a></li>
-				<li><a href="./studio/vfx-studio.html" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Vfx Studio</a></li>
-				<li><a href="contact.html" class="px-[4vw] md:px-[2vw] py-[1vw] md:py-[.5vw] inline-block duration-300 hover:bg-[#b6d561]/50 w-full">Contact</a></li>
-			</ul>
+	
+		<div x-cloak @mouseout="isHovered=false" @mouseover="isHovered=true" class="bg-[#000000] text-white hidden md:block absolute top-0 md:h-[20vh] lg:h-[42.5vh] left-0 w-full duration-700 z-0 md:pt-[6vh] lg:pt-[12vh]" :class="isHovered?'translate-y-0':'-translate-y-full'">
+			<div class="px-[6vw]">
+				<div class="py-[2vw] font-onest text-[1.2vw] font-medium">
+					<div x-show="activeEl==='about'">
+						<div :class="isHovered?'opacity-100':'opacity-0'" class="flex flex-col gap-[.5vw] duration-500 delay-[900ms]">
+							<a href="index.html#about-section" class="duration-300 hover:translate-x-1 inline-block">About</a>
+							<a href="contact.html" class="duration-300 hover:translate-x-1 inline-block">Contact Us</a>
+						</div>
+					</div>
+					<div x-show="activeEl==='work'">
+						<div :class="isHovered?'opacity-100':'opacity-0'" class="flex flex-col gap-[.5vw] duration-500 delay-[900ms]">
+							<p class="font-bold">Studios</p>
+							<a href="./studio/branding-studio.html" class="duration-300 hover:translate-x-1 inline-block">Branding Studio</a>
+							<a href="./studio/marketing-studio.html" class="duration-300 hover:translate-x-1 inline-block">Marketing Studio</a>
+							<a href="./studio/animation-studio.html" class="duration-300 hover:translate-x-1 inline-block">Animation Studio</a>
+							<a href="./studio/vfx-studio.html" class="duration-300 hover:translate-x-1 inline-block">Vfx Studio</a>
+						</div>
+					</div>
+					<div x-show="activeEl==='team'">
+						<div :class="isHovered?'opacity-100':'opacity-0'" class="flex flex-col gap-[.5vw] duration-500 delay-[900ms]">
+							<a href="team.html" class="duration-300 hover:translate-x-1 inline-block">Meet our Team</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
 
@@ -131,6 +162,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
 	<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 	<script src="./gsap.js"></script>
 	<script src="./script.js"></script>

@@ -1386,32 +1386,12 @@ select {
   height: 92vh;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-auto {
   height: auto;
 }
 
-.h-\[\] {
-  height: ;
-}
-
-.h-\[6\] {
-  height: 6;
-}
-
-.h-\[10vh\] {
-  height: 10vh;
-}
-
-.h-\[6vh\] {
-  height: 6vh;
-}
-
-.h-\[5vh\] {
-  height: 5vh;
+.h-full {
+  height: 100%;
 }
 
 .w-\[15vw\] {
@@ -3263,14 +3243,6 @@ select {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-\[\] {
-  color: ;
-}
-
-.text-\[\#\] {
-  color: #;
-}
-
 .underline {
   text-decoration-line: underline;
 }
@@ -3990,12 +3962,16 @@ html.lenis body {
     height: 1.95vw;
   }
 
-  .md\:h-\[12vh\] {
-    height: 12vh;
+  .md\:h-\[20vh\] {
+    height: 20vh;
   }
 
   .md\:h-\[2vw\] {
     height: 2vw;
+  }
+
+  .md\:h-\[3\.25vh\] {
+    height: 3.25vh;
   }
 
   .md\:h-\[40vh\] {
@@ -4006,52 +3982,16 @@ html.lenis body {
     height: 50vh;
   }
 
+  .md\:h-\[5vh\] {
+    height: 5vh;
+  }
+
   .md\:h-\[6vh\] {
     height: 6vh;
   }
 
   .md\:h-full {
     height: 100%;
-  }
-
-  .md\:h-\[18vh\] {
-    height: 18vh;
-  }
-
-  .md\:h-\[20vh\] {
-    height: 20vh;
-  }
-
-  .md\:h-\[vh\] {
-    height: vh;
-  }
-
-  .md\:h-\[5vh\] {
-    height: 5vh;
-  }
-
-  .md\:h-\[0vh\] {
-    height: 0vh;
-  }
-
-  .md\:h-\[4\.5vh\] {
-    height: 4.5vh;
-  }
-
-  .md\:h-\[4vh\] {
-    height: 4vh;
-  }
-
-  .md\:h-\[3\.9vh\] {
-    height: 3.9vh;
-  }
-
-  .md\:h-\[3\.2vh\] {
-    height: 3.2vh;
-  }
-
-  .md\:h-\[3\.25vh\] {
-    height: 3.25vh;
   }
 
   .md\:w-1\/2 {
@@ -4287,6 +4227,10 @@ html.lenis body {
     font-size: 1.2vw;
   }
 
+  .md\:text-\[1\.4vw\] {
+    font-size: 1.4vw;
+  }
+
   .md\:text-\[1\.5vw\] {
     font-size: 1.5vw;
   }
@@ -4366,8 +4310,8 @@ html.lenis body {
     height: 12vh;
   }
 
-  .lg\:h-\[32vh\] {
-    height: 32vh;
+  .lg\:h-\[42\.5vh\] {
+    height: 42.5vh;
   }
 
   .lg\:h-\[70vh\] {
@@ -4378,24 +4322,12 @@ html.lenis body {
     height: 88vh;
   }
 
-  .lg\:h-screen {
-    height: 100vh;
-  }
-
-  .lg\:h-\[35vh\] {
-    height: 35vh;
-  }
-
-  .lg\:h-\[40vh\] {
-    height: 40vh;
-  }
-
-  .lg\:h-\[42\.5vh\] {
-    height: 42.5vh;
-  }
-
   .lg\:h-\[8vh\] {
     height: 8vh;
+  }
+
+  .lg\:h-screen {
+    height: 100vh;
   }
 
   .lg\:items-center {
