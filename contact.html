@@ -17,13 +17,13 @@
 </head>
 
 <body class="antialiased">
-	<header data-aos="fade-down" class="sticky top-0 z-[999]" x-data="{isHovered:false, activeEl:'work'}">
+	<header class="sticky top-0 z-[999]" x-data="{isHovered:false, activeEl:'work'}">
 		<div class="absolute w-full h-full bg-[#f2f7f5] left-0 top-0"></div>
 		<div class="flex items-center justify-between px-[5vw] md:px-[6vw] h-[8vh] md:h-[5vh] lg:h-[12vh] relative z-[1]">
-			<div class="flex items-center gap-[4vw]">
+			<div class="flex-1 flex items-center justify-between md:justify-normal gap-[4vw]">
 				<a href="index.html" class="md:w-[15vw] inline-block relative md:h-[3.25vh] lg:h-[8vh]">
 					<img x-show="!isHovered" src="./public/images/logo.png" class="md:absolute w-[30vw] top-0 md:w-full h-auto" alt="Logo">
-					<img x-show="isHovered" src="./public/images/common/footer-logo.png" class="md:absolute top-0 w-[30vw] md:w-full h-auto" alt="Logo">
+					<img x-show="isHovered" src="./public/images/common/footer-logo.png" class="md:absolute top-4 w-[30vw] md:w-full h-auto" alt="Logo">
 				</a>
 				<nav class="hidden md:block">
 					<ul class="font-onest font-light text-[1.15vw] flex items-center" :class="isHovered?'text-white':'text-[#000000]'">
@@ -38,12 +38,18 @@
 						</li>
 					</ul>
 				</nav>
+
+				<button @click="mobileMenu = true" class="md:hidden">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<path fill="currentColor" fill-rule="evenodd" d="M20.75 7a.75.75 0 0 1-.75.75H4a.75.75 0 0 1 0-1.5h16a.75.75 0 0 1 .75.75m0 5a.75.75 0 0 1-.75.75H4a.75.75 0 0 1 0-1.5h16a.75.75 0 0 1 .75.75m0 5a.75.75 0 0 1-.75.75H4a.75.75 0 0 1 0-1.5h16a.75.75 0 0 1 .75.75" clip-rule="evenodd" />
+					</svg>
+				</button>
 			</div>
 			<a href="contact.html" class="w-max hidden bg-[#B7D661] border border-[#B7D661] text-[#000000] hover:bg-transparent duration-300 md:inline-block py-[1vw] md:py-[.75vw] px-[4vw] md:px-[2vw] rounded-[1vw]">
 				<p class="font-onest text-[2.25vw] md:text-[1.2vw] font-semibold text-center">Reach Us</p>
 			</a>
 		</div>
-	
+
 		<div x-cloak @mouseout="isHovered=false" @mouseover="isHovered=true" class="bg-[#000000] text-white hidden md:block absolute top-0 md:h-[20vh] lg:h-[42.5vh] left-0 w-full duration-700 z-0 md:pt-[6vh] lg:pt-[12vh]" :class="isHovered?'translate-y-0':'-translate-y-full'">
 			<div class="px-[6vw]">
 				<div class="py-[2vw] font-onest text-[1.2vw] font-medium">
@@ -71,6 +77,71 @@
 			</div>
 		</div>
 	</header>
+
+	<div x-cloak class="fixed inset-0 bg-black flex items-center justify-center z-[9999] duration-500 md:hidden" :class="mobileMenu ? 'translate-x-0':'translate-x-full'">
+		<div class="absolute top-[2.5%] right-[5%]">
+			<button class="" @click="mobileMenu = false">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white " viewBox="0 0 24 24">
+					<path fill="currentColor" d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6z" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="flex flex-col justify-center gap-[3vw] text-white text-[6vw] font-onest">
+			<button @click="activeMenu = 'about'" class="">About</button>
+			<button @click="activeMenu = 'work'" class="">Work</button>
+			<button @click="activeMenu = 'team'" class="">Our Team</button>
+		</div>
+	</div>
+
+	<!-- Mobile About -->
+	<div x-cloak class="fixed inset-0 bg-black flex items-center justify-center z-[9999] duration-500 md:hidden" :class="activeMenu === 'about' ? 'translate-x-0':'translate-x-full'">
+		<div class="absolute top-[2.5%] right-[5%]">
+			<button class="" @click="activeMenu = ''">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white " viewBox="0 0 24 24">
+					<path fill="currentColor" d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6z" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="flex flex-col justify-center gap-[3vw] text-white text-[6vw] font-onest">
+			<a href="index.html#about-section" @click="activeMenu = '';mobileMenu = false" class="">About</a>
+			<a href="contact.html" class="">Contact Us</a>
+		</div>
+	</div>
+
+	<!-- Mobile Work -->
+	<div x-cloak class="fixed inset-0 bg-black flex items-center justify-center z-[9999] duration-500 md:hidden" :class="activeMenu === 'work' ? 'translate-x-0':'translate-x-full'">
+		<div class="absolute top-[2.5%] right-[5%]">
+			<button class="" @click="activeMenu = ''">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white " viewBox="0 0 24 24">
+					<path fill="currentColor" d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6z" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="flex flex-col justify-center gap-[3vw] text-white text-[6vw] font-onest">
+			<a href="./studio/branding-studio.html">Branding Studio</a>
+			<a href="./studio/marketing-studio.html">Marketing Studio</a>
+			<a href="./studio/animation-studio.html">Animation Studio</a>
+			<a href="./studio/vfx-studio.html">Vfx Studio</a>
+		</div>
+	</div>
+
+	<!-- Mobile Team -->
+	<div x-cloak class="fixed inset-0 bg-black flex items-center justify-center z-[9999] duration-500 md:hidden" :class="activeMenu === 'team' ? 'translate-x-0':'translate-x-full'">
+		<div class="absolute top-[2.5%] right-[5%]">
+			<button class="" @click="activeMenu = ''">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="text-white " viewBox="0 0 24 24">
+					<path fill="currentColor" d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6z" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="flex flex-col justify-center gap-[3vw] text-white text-[6vw] font-onest">
+			<a href="team.html">Meet our Team</a>
+		</div>
+	</div>
 
 	<main>
 		<!-- Landing Section -->
